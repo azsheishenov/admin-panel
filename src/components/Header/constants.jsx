@@ -41,4 +41,8 @@ export const HEADER_NAV_ITEMS = [
             }
         ]
     },
+    {
+        label: "Anilibiria",
+        icon: 'pi pi-shield',
+    },
 ];

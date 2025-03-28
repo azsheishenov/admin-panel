@@ -1,18 +1,20 @@
-import { Button } from 'primereact/button';
-import { Menubar } from 'primereact/menubar';
+import {useState} from "react";
+import {Menubar} from 'primereact/menubar';
+import {Button} from 'primereact/button';
 
-import { HEADER_NAV_ITEMS } from './constants';
-        
+import {MenuSideBar} from "../SideBar/index.jsx";
+
 import './index.css';
 
 const Header = () => {
+    const [isOpenMenu, setIsOpenMenu] = useState(false)
 
     const onClick = () => {
-        console.log('Logout');
+        isOpenMenu(true)
     }
 
     const LogoutButtonTemplate = (
-        <Button  
+        <Button
             onClick={onClick}
             rounded
             icon="pi pi-sign-out"
@@ -20,14 +22,28 @@ const Header = () => {
         />
     )
 
+    const MenuButtonTemplate = (
+        <Button
+            text
+            rounded
+            onClick={onClick}
+            icon="pi pi-bars"
+        />
+    )
+
     return (
         <header className="header">
             <div className="container">
-                <Menubar 
-                    model={HEADER_NAV_ITEMS} 
-                    end={LogoutButtonTemplate} 
+                <Menubar
+                    start={MenuButtonTemplate}
+                    end={LogoutButtonTemplate}
                 />
             </div>
+
+            <MenuSideBar
+                visible={isOpenMenu}
+                setVisible={setIsOpenMenu}
+            />
         </header>
     )
 }
