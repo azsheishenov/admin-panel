@@ -1,0 +1,11 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+}
