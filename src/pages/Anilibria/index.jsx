@@ -1,10 +1,10 @@
 
 
-export const AnilibriaMain = () => {
+export const Anilibria = () => {
 
     return (
         <>
-            AnilibriaMain
+            Anilibria
         </>
     )
 }

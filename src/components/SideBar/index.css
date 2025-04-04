@@ -1,0 +1,9 @@
+.sidebar__menu {
+    width: 100%;
+}
+
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}

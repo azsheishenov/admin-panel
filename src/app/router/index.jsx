@@ -3,6 +3,7 @@ import Login from "../../pages/Login";
 import MainPage from "../../pages/MainPage";
 import DefaultLayout from "../../layout/DefaultLayout";
 import accessControl from "./pages/accessControl";
+import anilibria from "./pages/anilibria.jsx";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
                 element: <MainPage/>
             },
             ...accessControl,
+            ...anilibria,
         ]
     }
 ])

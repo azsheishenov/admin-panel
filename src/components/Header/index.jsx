@@ -26,7 +26,7 @@ const Header = () => {
         <Button
             text
             rounded
-            onClick={onClick}
+            onClick={() => setIsOpenMenu(true)}
             icon="pi pi-bars"
         />
     )
