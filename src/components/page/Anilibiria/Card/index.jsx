@@ -12,7 +12,17 @@ const Card = ({item}) => {
                 />
             </div>
             <div className={stl.content}>
-
+                <div>
+                    <h3>{item?.name?.main}</h3>
+                    <p>{item?.name?.english}</p>
+                </div>
+                <div>
+                    {item?.genres?.map((genre) => (
+                        <>
+                            <span></span>
+                        </>
+                    ))}
+                </div>
             </div>
         </div>
     );
