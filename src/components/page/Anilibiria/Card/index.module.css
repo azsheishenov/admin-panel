@@ -1,0 +1,14 @@
+.card {
+    padding: 16px 24px 16px 12px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.preview img {
+    max-width: 180px;
+    border-radius: 12px;
+}

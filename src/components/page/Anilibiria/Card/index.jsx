@@ -1,11 +1,19 @@
 import React from 'react';
 
-import style from './index.module.css'
+import stl from './index.module.css'
 
-const Card = () => {
+const Card = ({item}) => {
     return (
-        <div className={style.card}>
-            test
+        <div className={stl.card}>
+            <div className={stl.preview}>
+                <img
+                    src={`https://anilibria.top/${item?.poster?.src}`}
+                    alt={item?.name?.main}
+                />
+            </div>
+            <div className={stl.content}>
+
+            </div>
         </div>
     );
 };

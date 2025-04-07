@@ -20,7 +20,8 @@ export const Anilibria = () => {
             <PageHeader title='Каталог релизов'>
                 <AnilibiriaSearchInput/>
             </PageHeader>
-            <AnilibiriaCard/>
+            {catalog.length > 0 ?
+                catalog.map((item) => <AnilibiriaCard item={item} key={item.id}/>) : ''}
         </>
     )
 }
