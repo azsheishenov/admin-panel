@@ -2,13 +2,13 @@ import { Button } from 'primereact/button';
 import { NavLink } from 'react-router-dom';
 
 const itemRenderer = (item) => (
-    <NavLink 
+    <NavLink
         to={item.path}
-        className="flex align-items-center p-menuitem-link" 
+        className="flex align-items-center p-menuitem-link"
     >
-        <Button 
-            label={item.label} 
-            icon={item.icon} 
+        <Button
+            label={item.label}
+            icon={item.icon}
             className="p-button-text"
         />
     </NavLink>

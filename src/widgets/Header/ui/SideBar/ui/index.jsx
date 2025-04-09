@@ -1,10 +1,11 @@
 import {Sidebar} from 'primereact/sidebar';
 import {Menu} from 'primereact/menu';
-import {getSidebarMenuList, SIDEBAR_HEADER} from "./constants.jsx";
+
+import {getSidebarMenuList, SIDEBAR_HEADER} from "../model/constants/index.jsx";
 
 import './index.css'
 
-export const MenuSideBar = ({visible, setVisible}) => {
+const MenuSideBar = ({visible, setVisible}) => {
 
     const handleHideSidebar = () => setVisible(false);
 
@@ -22,3 +23,5 @@ export const MenuSideBar = ({visible, setVisible}) => {
         </Sidebar>
     )
 }
+
+export default MenuSideBar;

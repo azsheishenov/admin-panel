@@ -1,8 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
-import Login from "../../pages/Login";
-import MainPage from "../../pages/MainPage";
-import DefaultLayout from "../../layout/DefaultLayout";
-import accessControl from "./pages/accessControl";
+import {createBrowserRouter} from "react-router-dom";
+import Login from "../../pages/Login/index.jsx";
+import DefaultLayout from "../layout/DefaultLayout.jsx";
+import MainPage from "../../pages/MainPage/index.jsx";
+import accessControl from "./pages/accessControl.jsx";
 import anilibria from "./pages/anilibria.jsx";
 
 const router = createBrowserRouter([
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/',
-        element: <DefaultLayout />,
+        element: <DefaultLayout/>,
         children: [
             {
                 index: true,

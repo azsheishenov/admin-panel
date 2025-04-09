@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
-import AnilibiriaService from "../../entities/anilibria/api/anilibria.service.js";
-import {AnilibiriaCard, AnilibiriaSearchInput} from "../../components/page/Anilibiria";
-import PageHeader from "../../components/widgets/PageHeader";
+
+import {AnilibiriaService} from "../../entities/anilibria";
+import {AnilibiriaCard, AnilibiriaSearchInput} from "../../widgets/Anilibria/index.js";
+import PageHeader from "../../widgets/PageHeader/index.js";
 
 import stl from './index.module.css'
 

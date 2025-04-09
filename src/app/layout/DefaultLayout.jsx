@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Header from './../components/Header';
+import Header from '../../widgets/Header/ui/index.jsx';
 
 const DefaultLayout = ({children}) => {
     return (

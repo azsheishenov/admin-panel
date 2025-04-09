@@ -1,5 +1,5 @@
-import Card from './Card';
-import Search from './Search';
+import Card from './ui/Card';
+import Search from './ui/Search';
 
 
 export {

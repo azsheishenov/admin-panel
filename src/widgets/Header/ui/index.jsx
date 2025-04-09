@@ -2,7 +2,7 @@ import {useState} from "react";
 import {Menubar} from 'primereact/menubar';
 import {Button} from 'primereact/button';
 
-import {MenuSideBar} from "../SideBar/index.jsx";
+import MenuSideBar from "./SideBar";
 
 import './index.css';
 

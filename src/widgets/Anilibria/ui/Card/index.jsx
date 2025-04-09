@@ -1,10 +1,13 @@
 import React from 'react';
 
 import stl from './index.module.css'
-import {getSlicedText} from "./model/utils.js";
 import {NavLink} from "react-router-dom";
+import useText from "../../../../shared/hooks/useText.jsx";
 
 const Card = ({item}) => {
+
+    const {getSlicedText} = useText()
+
     return (
         <NavLink to={item?.alias} className={stl.card}>
             <div className={stl.preview}>
