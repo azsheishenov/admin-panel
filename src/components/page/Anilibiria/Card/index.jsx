@@ -1,10 +1,12 @@
 import React from 'react';
 
 import stl from './index.module.css'
+import {getSlicedText} from "./model/utils.js";
+import {NavLink} from "react-router-dom";
 
 const Card = ({item}) => {
     return (
-        <div className={stl.card}>
+        <NavLink to={item?.alias} className={stl.card}>
             <div className={stl.preview}>
                 <img
                     src={`https://anilibria.top/${item?.poster?.src}`}
@@ -12,19 +14,20 @@ const Card = ({item}) => {
                 />
             </div>
             <div className={stl.content}>
-                <div>
+                <div className={stl.content__title}>
                     <h3>{item?.name?.main}</h3>
                     <p>{item?.name?.english}</p>
                 </div>
-                <div>
-                    {item?.genres?.map((genre) => (
-                        <>
-                            <span></span>
-                        </>
+                <div className={stl.content__geners}>
+                    {item?.genres?.map((genre, idx) => (
+                        <span key={idx}>{idx >= 1 ? ` • ${genre?.name}` : genre?.name}</span>
                     ))}
                 </div>
+                <div className={stl.content__description}>
+                    <p>{getSlicedText(item?.description, 0, 500)}</p>
+                </div>
             </div>
-        </div>
+        </NavLink>
     );
 };
 

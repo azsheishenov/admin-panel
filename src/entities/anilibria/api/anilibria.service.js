@@ -13,8 +13,19 @@ const AnilibiriaService = () => {
         }
     }
 
+    const getAnimeByIdentifier = async (identifier) => {
+        try {
+            const {data} = await axios.get(`${BASE_URL}/anime/releases/${identifier}`)
+
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return {
         getAnimeCatalog,
+        getAnimeByIdentifier
     }
 }
 

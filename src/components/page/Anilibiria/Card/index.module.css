@@ -1,11 +1,41 @@
 .card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
     padding: 16px 24px 16px 12px;
+    border-radius: 12px;
+}
+
+.card:hover {
+    background: #f5f5f5;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.content__title {
+    h3 {
+        font-size: 18px;
+        color: #000000;
+    }
+
+    p {
+        font-size: 14px;
+        color: rgb(89 89 89);;
+    }
+}
+
+.content__geners span {
+    font-size: 14px;
+    color: rgb(89 89 89);;
+}
+
+.content__description p {
+    font-size: 14px;
+    color: #000000;
 }
 
 .preview img {
